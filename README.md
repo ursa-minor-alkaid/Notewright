@@ -1,29 +1,38 @@
 # Notewright
 
-笔记全流程插件，按 Agent Plugins 1.0 的通用目录组织。四个技能覆盖提取、整理、结构、绘图，三条命令处理翻译、书面化与图片链接。
+<p>
+  <img alt="Agent Plugins 1.0" src="https://img.shields.io/badge/Agent%20Plugins-1.0-2f6feb">
+  <img alt="version 1.0.0" src="https://img.shields.io/badge/version-1.0.0-3fb950">
+  <img alt="4 skills" src="https://img.shields.io/badge/skills-4-8957e5">
+  <img alt="3 commands" src="https://img.shields.io/badge/commands-3-d29922">
+</p>
 
-## 组件
+English | [简体中文](README.zh-CN.md)
 
-### 技能
+A full-cycle note plugin organized around the Agent Plugins 1.0 layout. Four skills cover extraction, organization, structure, and diagramming; three commands handle translation, formal rewriting, and image links.
 
-| 技能 | 用途 | 入口 |
+## Components
+
+### Skills
+
+| Skill | Purpose | Entry point |
 |---|---|---|
-| ordinote-organizer | 通用笔记整理：提取、去噪、规范化、添加、补充、导出 | `skills/ordinote-organizer/SKILL.md` |
-| resenote-organizer | 实验笔记与文献阅读：protocol、速读、精读、文献补充、预习 | `skills/resenote-organizer/SKILL.md` |
-| textura-nexus | 目录结构整理、去重、AI 长文压缩 | `skills/textura-nexus/SKILL.md` |
-| ars-graphica | 文字描述或图片转独立静态 SVG | `skills/ars-graphica/SKILL.md` |
+| ordinote-organizer | General note organization: extraction, denoising, standardization, merging, enrichment, export | `skills/ordinote-organizer/SKILL.md` |
+| resenote-organizer | Lab notes and literature reading: protocols, skimming, close reading, literature enrichment, experiment preparation | `skills/resenote-organizer/SKILL.md` |
+| textura-nexus | Directory structure cleanup, deduplication, AI long-text compression | `skills/textura-nexus/SKILL.md` |
+| ars-graphica | Text descriptions or images to standalone static SVG | `skills/ars-graphica/SKILL.md` |
 
-### 命令
+### Commands
 
-| 命令 | 用途 | 文件 |
+| Command | Purpose | File |
 |---|---|---|
-| img-format | 整理图片与 SVG 链接，重命名并统一为 `<img>` | `commands/img-format.md` |
-| note-trans | 就地翻译，并标注术语英文 | `commands/note-trans.md` |
-| note-written | 就地书面化，去除口癖 | `commands/note-written.md` |
+| img-format | Normalize image and SVG links, rename files, unify markup as `<img>` | `commands/img-format.md` |
+| note-trans | In-place translation with English terminology annotations | `commands/note-trans.md` |
+| note-written | In-place formal rewriting, removing verbal tics | `commands/note-written.md` |
 
-Agent Plugins 1.0 只定义技能与 MCP 两类组件，`commands/` 不属于通用层。支持命令的客户端可直接使用这三条命令，其他客户端只加载四个技能。
+Agent Plugins 1.0 defines only two component types, skills and MCP servers; `commands/` does not belong to the common layer. Clients that support commands can use these three directly; other clients load only the four skills.
 
-## 目录
+## Layout
 
 ```text
 Notewright/
@@ -45,18 +54,19 @@ Notewright/
 │       └── assets/examples/
 ├── commands/
 ├── README.md
+├── README.zh-CN.md
 ├── CHANGELOG.md
 └── .gitignore
 ```
 
-## 使用
+## Usage
 
-支持 Agent Plugins 1.0 的客户端可直接将本目录作为插件载入：读取根目录 `plugin.json`，扫描 `skills/` 的直接子目录，每个含 `SKILL.md` 的目录视为一个技能。
+Clients that support Agent Plugins 1.0 can load this directory as a plugin: read `plugin.json` at the root, scan the direct subdirectories of `skills/`, and treat every directory containing `SKILL.md` as a skill.
 
-## 依赖
+## Dependencies
 
-- `extract_pdf_pptx.py`：PyMuPDF、python-pptx
-- `extract_docx.py`：python-docx
-- `md2pdf.py`：markdown-it-py、Markdown Preview Enhanced 扩展、Chrome 或 Edge
-- `md2docx.py`：python-docx、markdown-it-py
-- `mineru_api.py`：仅标准库，需要环境变量 `MINERU_API_TOKEN`
+- `extract_pdf_pptx.py`: PyMuPDF, python-pptx
+- `extract_docx.py`: python-docx
+- `md2pdf.py`: markdown-it-py, Markdown Preview Enhanced extension, Chrome or Edge
+- `md2docx.py`: python-docx, markdown-it-py
+- `mineru_api.py`: standard library only; requires the `MINERU_API_TOKEN` environment variable
