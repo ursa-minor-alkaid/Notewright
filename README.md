@@ -1,13 +1,13 @@
-# Notewright
+<h1 align="center">Notewright</h1>
 
-<p>
+<p align="center">
   <img alt="Agent Plugins 1.0" src="https://img.shields.io/badge/Agent%20Plugins-1.0-2f6feb">
   <img alt="version 1.0.0" src="https://img.shields.io/badge/version-1.0.0-3fb950">
   <img alt="4 skills" src="https://img.shields.io/badge/skills-4-8957e5">
   <img alt="3 commands" src="https://img.shields.io/badge/commands-3-d29922">
 </p>
 
-English | [简体中文](README.zh-CN.md)
+<p align="center">English | <a href="README.zh-CN.md">简体中文</a></p>
 
 A full-cycle note plugin organized around the Agent Plugins 1.0 layout. Four skills cover extraction, organization, structure, and diagramming; three commands handle translation, formal rewriting, and image links.
 

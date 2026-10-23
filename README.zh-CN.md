@@ -1,13 +1,13 @@
-# Notewright
+<h1 align="center">Notewright</h1>
 
-<p>
+<p align="center">
   <img alt="Agent Plugins 1.0" src="https://img.shields.io/badge/Agent%20Plugins-1.0-2f6feb">
   <img alt="版本 1.0.0" src="https://img.shields.io/badge/version-1.0.0-3fb950">
   <img alt="4 个技能" src="https://img.shields.io/badge/skills-4-8957e5">
   <img alt="3 条命令" src="https://img.shields.io/badge/commands-3-d29922">
 </p>
 
-[English](README.md) | 简体中文
+<p align="center"><a href="README.md">English</a> | 简体中文</p>
 
 笔记全流程插件，按 Agent Plugins 1.0 的通用目录组织。四个技能覆盖提取、整理、结构、绘图，三条命令处理翻译、书面化与图片链接。
 
