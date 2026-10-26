@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="muses-helicon@3x.png" alt="Notewright" width="100%">
+</p>
+
 <h1 align="center">Notewright</h1>
 
 <p align="center">
